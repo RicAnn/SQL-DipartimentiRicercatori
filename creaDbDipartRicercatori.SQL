@@ -5,7 +5,7 @@ USE DipartimentiRicercatori;
 /*  creo la tabella Ricercatori */
 
 CREATE TABLE Ricercatori(
-    ID smallint Primary Key,
+    ID smallint(6) Primary Key,
     Nome varchar(20) not null,
     Cognome varchar(30) not null,
     Residenza varchar(40) default "*** Manca Residenza",
@@ -35,10 +35,12 @@ INSERT INTO Dipartimenti (Codice, Descrizione,Sede) VALUES
 ;
 
 INSERT INTO Ricercatori (ID, Nome,Cognome, Residenza, Stipendio, Dipartimento) VALUES 
-('1','Raffaele', 'DAmico','Via Roma 3, 00100 Roma (RM)', 3000.00, '01'),
+('1','Raffaele', 'D Amico','Via Roma 3, 00100 Roma (RM)', 3000.00, '01'),
 ('2','Giuseppe', 'Verdi','Via Verdi 3, 00100 Roma (RM)', 2500.00, '02'),
 ('3','Mario', 'Rossi','Via Rossi 3, 00100 Roma (RM)', 2000.00, '03'),
 ('4','Luigi', 'Bianchi','Via Bianchi 3, 00100 Roma (RM)', 1500.00, '04'),
 ('5','Giovanni', 'Neri','Via Neri 3, 00100 Roma (RM)', 1000.00, '05'),
 ('6','Paolo', 'Verdi','Via Verdi 3, 00100 Roma (RM)', 500.00, '06'),
-('7','Giuseppe', 'Rossi','Via Rossi 3, 00100 Roma (RM)', 400.00, '07');
+('7','Giuseppe', 'Rossi','Via Rossi 3, 00100 Roma (RM)', 400.00, '07'),
+('8','Lorenzo', 'De Niro','Via Roma, 003450  (XX)', 2400.00, '04'),
+('9','Giuseppe', 'Rossi','Via Neri 7, 00140 Roma (RM)', 1200.00, '01');
