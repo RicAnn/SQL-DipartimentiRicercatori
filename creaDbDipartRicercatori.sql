@@ -44,3 +44,15 @@ INSERT INTO Ricercatori (ID, Nome,Cognome, Residenza, Stipendio, Dipartimento) V
 ('7','Giuseppe', 'Rossi','Via Rossi 3, 00100 Roma (RM)', 400.00, '07'),
 ('8','Lorenzo', 'De Niro','Via Roma, 003450  (XX)', 2400.00, '04'),
 ('9','Giuseppe', 'Rossi','Via Neri 7, 00140 Roma (RM)', 1200.00, '01');
+
+-- Creazione di un nuovo utente
+CREATE USER 'nuovo_utente'@'localhost' IDENTIFIED BY 'password';
+
+-- Assegnazione di privilegi all'utente
+GRANT SELECT, INSERT, UPDATE ON DipartimentiRicercatori.* TO 'nuovo_utente'@'localhost';
+
+-- Revoca di privilegi
+REVOKE INSERT ON DipartimentiRicercatori.* FROM 'nuovo_utente'@'localhost';
+
+-- Eliminazione dell'utente
+DROP USER 'nuovo_utente'@'localhost';
