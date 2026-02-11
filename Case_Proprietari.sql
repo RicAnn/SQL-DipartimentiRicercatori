@@ -5,7 +5,7 @@ CREATE TABLE Casa(
     ID smallint(6) Primary Key,
     via varchar(20) not null,
     mq int(5) not null
-);
+); 
 CREATE TABLE Proprietario(
     ID   smallint(6) Primary Key,
     nome varchar(20) not null,
